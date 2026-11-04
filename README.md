@@ -1,23 +1,36 @@
-# Spam Mail Classification
+# 📧 Spam Mail Classification
 
-## Live Demo
-[Click here to try the Spam Mail Classification App](YOUR_DEPLOYED_APP_URL)
+## 🚀 Live Demo
+[Click here to try the Spam Mail Classification App](https://spam-mail-classification-xnakm3ibiht9bxlfrnxv2d.streamlit.app/)
 
-## Project Overview
+## 🖥️ Application Screenshot
+
+![Spam Mail Classification](Spam%20Mail%20Classification-screenshot.png)
+
+---
+
+## 📌 Project Overview
+
 This project is a Machine Learning-based Spam Mail Classification system that identifies whether an email message is **Spam** or **Ham (Legitimate)**.
 
 The system uses Natural Language Processing (NLP) techniques, TF-IDF (Term Frequency-Inverse Document Frequency) for text feature extraction, and Logistic Regression for classification.
 
 A Streamlit web application provides an interactive interface where users can enter email messages, receive predictions, explore model performance, and analyze dataset insights.
 
-## Project Objectives
+---
+
+## 🎯 Project Objectives
+
 - Classify email messages as Spam or Ham.
 - Apply text preprocessing and feature extraction using TF-IDF.
 - Train a Logistic Regression classification model.
 - Evaluate model performance using classification metrics.
 - Build an interactive web application using Streamlit.
 
-## Dataset
+---
+
+## 📂 Dataset
+
 The project uses a labelled SMS/email dataset stored in `mail_data.csv`.
 
 **Dataset information:**
@@ -29,7 +42,10 @@ The project uses a labelled SMS/email dataset stored in `mail_data.csv`.
   - `0`: Spam
   - `1`: Ham
 
-## Data Preprocessing
+---
+
+## 🧹 Data Preprocessing
+
 The following preprocessing steps were performed:
 
 1. Loaded the dataset using Pandas.
@@ -38,16 +54,23 @@ The following preprocessing steps were performed:
    - Spam → 0
    - Ham → 1
 4. Separated the message column and target labels.
-5. Split the dataset into training (80%) and testing (20%) sets.
+5. Split the dataset into training (80%) and testing (20%) sets using stratified sampling.
 
-## Exploratory Data Analysis
+---
+
+## 📊 Exploratory Data Analysis
+
 The dataset was explored to understand its structure and characteristics, including:
+
 - Dataset dimensions and structure.
 - Spam and Ham message distribution.
 - Message length statistics.
 - Comparison of message characteristics across categories.
 
-## Feature Extraction
+---
+
+## 🔤 Feature Extraction
+
 **TF-IDF Vectorization** was used to convert text messages into numerical feature vectors.
 
 Configuration:
@@ -57,7 +80,10 @@ Configuration:
 
 TF-IDF assigns importance to words based on their frequency within a message and across the dataset.
 
-## Model Development
+---
+
+## 🤖 Model Development
+
 **Algorithm:** Logistic Regression
 
 The Logistic Regression classifier was trained using the TF-IDF-transformed training messages.
@@ -70,11 +96,13 @@ The Logistic Regression classifier was trained using the TF-IDF-transformed trai
 
 The trained model and fitted TF-IDF vectorizer were saved using Joblib for reuse in the Streamlit application.
 
-## Model Evaluation
+---
+
+## 📈 Model Evaluation
 
 The model was evaluated using accuracy, precision, recall, F1-score, and a confusion matrix.
 
-| Metric | Training / Testing Result |
+| Metric | Result |
 |---|---:|
 | Training Accuracy | 96.68% |
 | Testing Accuracy | 97.13% |
@@ -93,23 +121,25 @@ The model was evaluated using accuracy, precision, recall, F1-score, and a confu
 
 **Key Observation:** The model achieves 97.13% testing accuracy and performs particularly well at identifying legitimate messages. However, its 79% spam recall indicates that some spam messages are incorrectly classified as legitimate emails.
 
-## Streamlit Application Features
+---
+
+## 🌐 Streamlit Application Features
 
 The application contains three sections:
 
-### 1. Spam Mail Prediction
+### 1. 📩 Spam Mail Prediction
 - Enter an email message.
 - Predict whether the message is Spam or Ham.
 - View the model's prediction confidence.
 
-### 2. Model Performance
-- View training and testing model evaluation results.
+### 2. 📊 Model Performance
+- View model evaluation results.
 - Explore accuracy, precision, recall, and F1-score.
 - View the classification report.
 - Visualize the confusion matrix.
 - Examine correct and incorrect predictions.
 
-### 3. Dataset Insights
+### 3. 📈 Dataset Insights
 - View total email messages.
 - Explore Spam vs Ham distribution.
 - Compare Spam and Ham percentages.
@@ -117,7 +147,9 @@ The application contains three sections:
 - Explore message length statistics.
 - Preview dataset records.
 
-## Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 - **Programming Language:** Python
 - **Data Manipulation:** Pandas, NumPy
@@ -128,7 +160,9 @@ The application contains three sections:
 - **Data Visualization:** Matplotlib
 - **Web Application:** Streamlit
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```text
 Spam Mail Classification/
@@ -143,7 +177,9 @@ Spam Mail Classification/
 └── README.md
 ```
 
-## Installation and Execution
+---
+
+## ⚙️ Installation and Execution
 
 ### 1. Clone the Repository
 
@@ -185,5 +221,8 @@ streamlit run app.py
 
 The application will open in your default web browser.
 
-## Disclaimer
+---
+
+## ⚠️ Disclaimer
+
 This project is developed for educational and demonstration purposes. Predictions are based on a trained machine learning model and should not be considered a guaranteed determination of whether an email is malicious or legitimate.
